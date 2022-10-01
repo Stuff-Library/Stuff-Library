@@ -87,17 +87,52 @@ a componentDidMount.
 
 //setup stuff
 //import everything, set up default variables, etc etc etc.
-import React, {Component} from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import { SingleEntryPlugin } from 'webpack';
+import { Signup } from './components/signup';
+import { UI } from './components/ui';
 import './react-style.css';
+import '/components/*.js';
 
-//testing for initial "is it working" test
+//testing for initial "is it working" test. Ignore this once we have the real app "working".
 const Testing = () => {
   return <div>If you can see this, react is working. Yay!</div>;
 };
 
 
+//This is the app. 
+//Set up state. 
+//Set up functions.
+//Set up conditional display.  
+function App(){
+  //state Stuff
+  const [username = "", setUsername] = React.useState(0);
+  const [password = "", setPassword] = React.useState(0);
+  const [isLoggedIn = false, setIsLoggedIn] = React.useState(0);
+  const [noUsername = false, setNoUsername] = React.useState(0);
+
+  //More to be added
+
+  //functions stuff
+
+  //conditional display
+  if(isLoggedIn = false){
+    return Login;
+  }
+  if(noUsername = true){
+    return Signup;
+  }
+  if(isLoggedIn = true){
+    return UI;
+  }
+
+ };
+ 
+
+
+
 
 
 //Render
-ReactDOM.render(<Testing />, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));
