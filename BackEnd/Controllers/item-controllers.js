@@ -9,15 +9,16 @@ itemController.createItem = (req, res, next) => {
     queryData: {},
   };
 
-  req.locals.queryData.tableName = 'item';
+  req.locals.queryData.tableName = 'items';
   req.locals.queryData.name = req.body.name;
   //if we need description of an item
-//   req.locals.queryData.description = req.body.description;
+  //   req.locals.queryData.description = req.body.description;
 
   console.log(req.body);
   next();
 };
 
+<<<<<<< HEAD
 itemController.getItems = (req, res, next) => {
     console.log(res.locals.response.rows[0].id);
 
@@ -32,5 +33,8 @@ itemController.getItems = (req, res, next) => {
     // const query = new getRecordsModel();
     // query.setConditions = (`owner = '${}'`)
 }
+=======
+itemController.getItems = (req, res, next) => {};
+>>>>>>> 4375822 (made chnages to item router post and item controller)
 
 module.exports = itemController;
