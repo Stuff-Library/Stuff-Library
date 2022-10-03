@@ -9,7 +9,12 @@ router.post('/create', userController.createUser, databaseController.insertRecor
     res.sendStatus(200);
 })
 
+<<<<<<< HEAD
 router.post('/login', userController.loginUser, databaseController.getRecords, (request, response) => {
+=======
+router.post('/login', (request, response) => {
+
+>>>>>>> 8acb8dd (Setting up new branch to work on routing)
     response.status(200).send('testing login function')
   });
 

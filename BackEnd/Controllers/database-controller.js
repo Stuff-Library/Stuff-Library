@@ -56,8 +56,11 @@ EXPECTED DATA FORMAT for Req.locals.queryData:
 }
 
 databaseController.getRecords = async(req, res, next) => {
+<<<<<<< HEAD
     // Expected Data Format: see ../Models/QueryDataExamples/getRecordsExample.jsonc for expected format.
 
+=======
+>>>>>>> 8acb8dd (Setting up new branch to work on routing)
     let query = `SELECT `
 
     if(!req.locals || !req.locals.queryData) throw new Error("databaseController.getRecords: Did not include queryData in req.locals.")
@@ -88,8 +91,13 @@ databaseController.getRecords = async(req, res, next) => {
     query = query.slice(0,-4);
     query += ';';
     const response = await db.query(query);
+<<<<<<< HEAD
     res.locals.response = response;
     return next();
+=======
+        console.log(response);
+        res.locals.response = response;
+>>>>>>> 8acb8dd (Setting up new branch to work on routing)
 }
 
 module.exports = databaseController;
