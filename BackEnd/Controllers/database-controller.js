@@ -91,13 +91,8 @@ databaseController.getRecords = async(req, res, next) => {
     query = query.slice(0,-4);
     query += ';';
     const response = await db.query(query);
-<<<<<<< HEAD
     res.locals.response = response;
     return next();
-=======
-        console.log(response);
-        res.locals.response = response;
->>>>>>> 8acb8dd (Setting up new branch to work on routing)
 }
 
 module.exports = databaseController;
