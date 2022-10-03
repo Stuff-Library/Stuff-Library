@@ -4,6 +4,7 @@ const getRecordsModel = require('../Models/get-records-model')
 
 const itemController = {};
 
+//middleware for creating an item in the database
 itemController.createItem = (req, res, next) => {
   req.locals = {
     queryData: {},
