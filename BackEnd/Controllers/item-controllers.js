@@ -5,7 +5,14 @@ const getRecordsModel = require('../Models/get-records-model')
 const itemController = {};
 
 itemController.createItem = (req, res, next) => {
-    
+  req.locals = {
+    queryData: {},
+  };
+
+  req.locals.queryData.tableName = 'item';
+  req.locals.queryData.name = req.body.name;
+
+  next();
 };
 
 itemController.getItems = (req, res, next) => {
