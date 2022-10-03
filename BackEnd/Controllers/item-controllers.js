@@ -18,7 +18,6 @@ itemController.createItem = (req, res, next) => {
   next();
 };
 
-<<<<<<< HEAD
 itemController.getItems = (req, res, next) => {
     console.log(res.locals.response.rows[0].id);
 
@@ -33,8 +32,5 @@ itemController.getItems = (req, res, next) => {
     // const query = new getRecordsModel();
     // query.setConditions = (`owner = '${}'`)
 }
-=======
-itemController.getItems = (req, res, next) => {};
->>>>>>> 4375822 (made chnages to item router post and item controller)
 
 module.exports = itemController;
